@@ -51,7 +51,7 @@ const App = () => {
       case 1:
         if (!formData.name) tempErrors.name = "Name is required";
         if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) tempErrors.email = "Valid email is required";
-        if (!formData.phone || formData.phone.length !== 10) tempErrors.phone = "Valid phone number is required";
+        if (!formData.phone || formData.phone.length !== 10 || !Number(formData.phone)) tempErrors.phone = "Valid phone number is required";
         break;
       case 2:
         if (!formData.address1) tempErrors.address1 = "Address Line 1 is required";
